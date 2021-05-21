@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Activity.ChatActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Chat"
+        android:id="@+id/chatTV"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/chatTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chatRecyclerView"
+        android:layout_marginTop="20dp"
+        android:overScrollMode="never"
+        android:layout_marginBottom="20dp"
+        android:nestedScrollingEnabled="false"
+        android:layout_above="@id/messageEditText"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sendButton"
+        android:maxLines="3"
+        android:id="@+id/messageEditText"
+        android:layout_marginBottom="20dp"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Send Message"
+        android:id="@+id/sendButton"/>
+
+
+</RelativeLayout>

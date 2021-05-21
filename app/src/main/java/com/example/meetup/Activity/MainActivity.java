@@ -1,28 +1,23 @@
-package com.example.meetup;
+package com.example.meetup.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatSpinner;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.contentcapture.DataRemovalRequest;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ProgressBar;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.meetup.Adapter.UserDataAdapter;
+import com.example.meetup.Interests.InterestField;
 import com.example.meetup.Interests.Interests;
 import com.example.meetup.Models.Users;
+import com.example.meetup.R;
 import com.example.meetup.UsersList.CommonInterestUsers;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -33,14 +28,9 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private TextView showInterest;
@@ -73,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         Interests interests = new Interests();
         Intent intent = getIntent();
         INTEREST = intent.getStringExtra("INTEREST");
+        InterestField.setINTEREST(INTEREST);
 //        progressDialog.setTitle("Please wait");
 //        progressDialog.show();
         //showInterest.setText(INTEREST);
@@ -156,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                         {
                             System.out.println(ds.getValue());
                             ds.getValue();
-                            commonInterestUsers.addUser(new Users(ds.getValue().toString()));
+                            commonInterestUsers.addUser(new Users(ds.getValue().toString(),ds.getKey().toString()));
                             //list.add(new Users(ds.getValue().toString()));
                         }
 
@@ -230,13 +221,13 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
 
-    private List<Users> getData()
-    {
-        List<Users> list = new ArrayList<>();
-        list.add(new Users("rontubarhoi@gmail.com"));
-        list.add(new Users("one@one.ocm"));
-        list.add(new Users("onelere erlejle"));
-
-        return list;
-    }
+//    private List<Users> getData()
+//    {
+//        List<Users> list = new ArrayList<>();
+//        list.add(new Users("rontubarhoi@gmail.com"));
+//        list.add(new Users("one@one.ocm"));
+//        list.add(new Users("onelere erlejle"));
+//
+//        return list;
+//    }
 }

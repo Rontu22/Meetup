@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.meetup.Activity.ChatActivity;
 import com.example.meetup.Interests.InterestsListActivity;
 import com.example.meetup.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -36,7 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
         enteredEmail = findViewById(R.id.registerEmail);
         enteredPassword = findViewById(R.id.passwordRegister);
         registerButton = findViewById(R.id.registerButton);
-        haveAccountTV = findViewById(R.id.have_account_login);
+        //haveAccountTV = findViewById(R.id.have_account_login);
         firebaseAuth = FirebaseAuth.getInstance();
 
         registerButton.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +46,11 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = enteredEmail.getText().toString();
                 String password = enteredPassword.getText().toString();
                 registerUser(email,password);
+
+
+               // startActivity(new Intent(RegisterActivity.this, ChatActivity.class));
+
+
             }
         });
 
@@ -65,12 +71,12 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
-        haveAccountTV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
-            }
-        });
+//        haveAccountTV.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+//            }
+//        });
 
 
 

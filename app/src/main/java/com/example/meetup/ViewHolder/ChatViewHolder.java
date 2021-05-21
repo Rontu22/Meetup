@@ -1,6 +1,7 @@
 package com.example.meetup.ViewHolder;
 
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,17 +11,21 @@ import com.example.meetup.R;
 
 import org.jetbrains.annotations.NotNull;
 
-public class UserViewHolder extends RecyclerView.ViewHolder {
+public class ChatViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView userEmail;
     public TextView userID;
+    public TextView message;
     public View view;
 
-    public UserViewHolder(@NonNull @NotNull View itemView) {
+
+
+
+    public ChatViewHolder(@NonNull @NotNull View itemView) {
         super(itemView);
 
-        userEmail = (TextView)itemView.findViewById(R.id.userEmail);
-        userID = (TextView)itemView.findViewById(R.id.userIdPlace);
+        userID = (TextView)itemView.findViewById(R.id.chatUserID);
+        message = (TextView) itemView.findViewById(R.id.message);
         view = itemView;
+
     }
 }

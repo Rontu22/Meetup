@@ -11,8 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.meetup.Interests.InterestsListActivity;
-import com.example.meetup.MainActivity;
+import com.example.meetup.Activity.MainActivity;
 import com.example.meetup.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;

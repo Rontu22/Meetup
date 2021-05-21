@@ -11,11 +11,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.meetup.MainActivity;
+import com.example.meetup.Activity.MainActivity;
 import com.example.meetup.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class InterestsListActivity extends AppCompatActivity {
     private Spinner interestsSpinner;

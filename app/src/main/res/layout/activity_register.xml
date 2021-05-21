@@ -53,14 +53,14 @@
         android:text="REGISTER"
         android:id="@+id/registerButton"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/registerButton"
-        android:text="Already Have Account ? Login"
-        android:id="@+id/have_account_login"/>
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_below="@id/registerButton"-->
+<!--        android:text="Already Have Account ? Login"-->
+<!--        android:id="@+id/have_account_login"/>-->
 
 
 </RelativeLayout>
