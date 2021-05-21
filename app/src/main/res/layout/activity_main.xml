@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:text="Welcome to home"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textColor="@color/cardview_dark_background"-->
+<!--        android:id="@+id/selectInterest"-->
+<!--        />-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Me to the list"
+        android:id="@+id/add_myself"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="show All Users"
+        android:id="@+id/showAllUsers"
+        android:layout_alignParentEnd="true"/>
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Show all users"-->
+<!--        android:layout_below="@id/selectInterest"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:id="@+id/showAllUsers"/>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerViewShowUsers"
+        android:layout_below="@id/showAllUsers"
+        android:layout_marginTop="30dp"
+        android:overScrollMode="never"
+        android:nestedScrollingEnabled="false"
+        />
+
+
+<!--    <Spinner-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/dropDownInterests"-->
+<!--        android:layout_below="@+id/selectInterest"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        >-->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:nestedScrollingEnabled="false"-->
+<!--        android:id="@+id/recyclerView"-->
+<!--        android:overScrollMode="never"-->
+<!--        />-->
+<!--    </LinearLayout>-->
+
+</RelativeLayout>

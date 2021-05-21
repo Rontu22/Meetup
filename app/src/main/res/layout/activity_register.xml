@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Register.RegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Register"
+        android:textAllCaps="true"
+        android:layout_marginTop="50dp"
+        android:textSize="24dp"
+        android:id="@+id/registerTV"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/registerEmail"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/registerName"
+        android:hint="Enter Your Name"
+        android:inputType="textEmailAddress"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/registerEmail"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerEmail"
+        android:layout_marginTop="30dp"
+        android:id="@+id/passwordRegister"
+        android:hint="Enter Password"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="REGISTER"
+        android:id="@+id/registerButton"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/registerButton"
+        android:text="Already Have Account ? Login"
+        android:id="@+id/have_account_login"/>
+
+
+</RelativeLayout>
